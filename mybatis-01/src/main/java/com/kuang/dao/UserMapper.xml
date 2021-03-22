@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.kuang.dao.UserMapper">
+
+    <!--id=Dao中需要实现的方法-->
+    <!--resultType可以直接返回给出的返回值类型，比如String、int、Map，等等，其中返回List也是将返回类型定义为Map,一般为泛型-->
+<select id="getUserList" resultType="com.kuang.pojo.User">
+    select * from mybatis.user
+</select>
+
+</mapper>
