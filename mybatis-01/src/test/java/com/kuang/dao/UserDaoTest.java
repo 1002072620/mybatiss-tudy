@@ -1,7 +1,7 @@
 package com.kuang.dao;
 
 import com.kuang.pojo.User;
-import com.kuang.utils.MybaUtils;
+import com.kuang.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
@@ -16,7 +16,7 @@ public class UserDaoTest {
     @Test
     public  void test(){
         //第一部：从自己创建的工具类获得sqlSession对象
-        SqlSession sqlSession = MybaUtils.getSqlSession();
+        SqlSession sqlSession = MybatisUtils.getSqlSession();
         //执行SQL,面向接口编程，即实现UserDao接口的方法
         UserMapper userDao = sqlSession.getMapper(UserMapper.class);
         List<User> userList = userDao.getUserList();

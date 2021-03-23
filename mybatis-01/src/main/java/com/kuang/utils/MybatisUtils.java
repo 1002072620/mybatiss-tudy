@@ -13,7 +13,7 @@ import java.io.InputStream;
  * @create 2021-03-22 16:17
  */
 
-public class MybaUtils {
+public class MybatisUtils {
 
     private static  SqlSessionFactory sqlSessionFactory ;
 
